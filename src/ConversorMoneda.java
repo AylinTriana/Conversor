@@ -14,7 +14,7 @@ public class ConversorMoneda {
 
     public Moneda consultar(int opcion, Double monto) {
         establecerMonedas(opcion);
-        URI url = URI.create("https://v6.exchangerate-api.com/v6/636698ed0979b2c8fd4c6b2a/pair/" + moneda + "/" + convertirMoneda
+        URI url = URI.create("https://v6.exchangerate-api.com/v6/1e50aec24c2aba868bca8a8b/pair/" + moneda + "/" + convertirMoneda
                 + "/" + monto + "/");
         String responseBody = realizarSolicitud(url);
         return new Gson().fromJson(responseBody, Moneda.class);
